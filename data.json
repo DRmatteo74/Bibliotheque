@@ -1,0 +1,237 @@
+{
+  "bookData": [
+    {
+      "title": "L'Étranger",
+      "author": "Albert Camus",
+      "genre": "Roman",
+      "year": 1942,
+      "description": "Le roman emblématique d'Albert Camus qui explore la philosophie de l'absurde à travers le personnage de Meursault.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Science-Fiction",
+      "year": 1949,
+      "description": "Un classique de la dystopie, décrivant un monde totalitaire sous la surveillance constante de Big Brother.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-15"
+    },
+    {
+      "title": "Le Seigneur des Anneaux",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1954,
+      "description": "L'épique voyage de Frodo pour détruire l'Anneau unique et sauver la Terre du Milieu.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "genre": "Roman",
+      "year": 1943,
+      "description": "Le conte poétique sur un petit prince qui voyage d'une planète à l'autre, rencontrant des personnages uniques.",
+      "status": "Emprunté",
+      "dueDate": "2023-11-30"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science-Fiction",
+      "year": 1965,
+      "description": "L'histoire épique de Paul Atreides dans un futur lointain, sur une planète désertique appelée Dune.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Crime et Châtiment",
+      "author": "Fiodor Dostoïevski",
+      "genre": "Roman",
+      "year": 1866,
+      "description": "L'histoire de Raskolnikov, un étudiant qui commet un meurtre et doit faire face à sa culpabilité.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Maître et Marguerite",
+      "author": "Mikhaïl Boulgakov",
+      "genre": "Roman",
+      "year": 1967,
+      "description": "Un chef-d'œuvre de la littérature russe mêlant réalisme et éléments surnaturels dans le Moscou des années 1930.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "genre": "Science-Fiction",
+      "year": 1953,
+      "description": "Un monde dystopique où les livres sont brûlés, et un pompier chargé de les détruire se rebelle.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-20"
+    },
+    {
+      "title": "L'Écume des Jours",
+      "author": "Boris Vian",
+      "genre": "Roman",
+      "year": 1947,
+      "description": "Une histoire d'amour fantastique où le monde réel et l'absurde se mêlent.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-10"
+    },
+    {
+      "title": "Le Guépard",
+      "author": "Giuseppe Tomasi di Lampedusa",
+      "genre": "Roman historique",
+      "year": 1958,
+      "description": "L'histoire du prince Salina et de la fin de la noblesse en Sicile au 19e siècle.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Château",
+      "author": "Franz Kafka",
+      "genre": "Roman",
+      "year": 1926,
+      "description": "L'histoire de K., qui arrive dans un village pour devenir fonctionnaire du château, mais se trouve confronté à la bureaucratie absurde.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "L'Alchimiste",
+      "author": "Paulo Coelho",
+      "genre": "Roman",
+      "year": 1988,
+      "description": "L'histoire de Santiago, un berger qui voyage pour trouver un trésor au pied des Pyramides d'Égypte.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-12"
+    },
+    {
+      "title": "Le Nom du Vent",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy",
+      "year": 2007,
+      "description": "Les aventures de Kvothe, un musicien prodige et magicien, dans un monde fantastique.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Les Misérables",
+      "author": "Victor Hugo",
+      "genre": "Roman",
+      "year": 1862,
+      "description": "L'épopée de Jean Valjean et des personnages liés à sa vie dans la France du 19e siècle.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Meilleur des mondes",
+      "author": "Aldous Huxley",
+      "genre": "Science-Fiction",
+      "year": 1932,
+      "description": "Un monde futuriste où la société est contrôlée pour atteindre la stabilité, mais à quel prix ?",
+      "status": "Emprunté",
+      "dueDate": "2023-12-18"
+    },
+    {
+      "title": "Le Comte de Monte-Cristo",
+      "author": "Alexandre Dumas",
+      "genre": "Roman d'aventure",
+      "year": 1844,
+      "description": "L'histoire de la vengeance de Edmond Dantès après son emprisonnement injuste.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Orgueil et Préjugés",
+      "author": "Jane Austen",
+      "genre": "Roman",
+      "year": 1813,
+      "description": "Une histoire d'amour et de classe sociale mettant en vedette Elizabeth Bennet et Mr. Darcy.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Prophète",
+      "author": "Kahlil Gibran",
+      "genre": "Philosophie",
+      "year": 1923,
+      "description": "Un recueil de poèmes et de méditations philosophiques sur la vie et l'amour.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-14"
+    },
+    {
+      "title": "La Nuit des temps",
+      "author": "René Barjavel",
+      "genre": "Science-Fiction",
+      "year": 1968,
+      "description": "La découverte d'une civilisation gelée sous la glace en Antarctique bouleverse l'humanité.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Les Trois Mousquetaires",
+      "author": "Alexandre Dumas",
+      "genre": "Roman d'aventure",
+      "year": 1844,
+      "description": "Les aventures de D'Artagnan et des mousquetaires dans la France du 17e siècle.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Le Parfum",
+      "author": "Patrick Süskind",
+      "genre": "Roman",
+      "year": 1985,
+      "description": "L'histoire de Jean-Baptiste Grenouille, un tueur en série obsédé par les odeurs.",
+      "status": "Emprunté",
+      "dueDate": "2023-12-16"
+    },
+    {
+      "title": "Les Fourmis",
+      "author": "Bernard Werber",
+      "genre": "Science-Fiction",
+      "year": 1991,
+      "description": "Une enquête sur la vie des fourmis et une révélation sur le destin de l'humanité.",
+      "status": "Disponible",
+      "dueDate": null
+    },
+    {
+      "title": "Les Cerfs-volants de Kaboul",
+      "author": "Khaled Hosseini",
+      "genre": "Roman",
+      "year": 2003,
+      "description": "Une histoire d'amitié et de trahison en Afghanistan à travers les vies de deux garçons.",
+      "status": "Disponible",
+      "dueDate": null
+    }
+  ],
+  "shelfData": [
+    {
+      "name": "Romans Classiques",
+      "books": [3,5,6,9,13,16,19,20,22]
+    },
+    {
+      "name": "Science-Fiction",
+      "books": [4,14,18]
+    },
+    {
+      "name": "Fantasy",
+      "books": [2]
+    },
+    {
+      "name": "Dystopies",
+      "books": [1,7]
+    },
+    {
+      "name": "Aventures",
+      "books": [8,11,12,15]
+    },
+    {
+      "name": "Philosophie",
+      "books": [0,10,17,21]
+    }
+  ]
+}
