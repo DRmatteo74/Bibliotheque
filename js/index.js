@@ -5,6 +5,9 @@ function openJson(){
         .then(response => response.json())
         .then(_data => {
           data = _data;
+
+          const dataReadyEvent = new CustomEvent("dataReady", {detail: _data});
+          window.dispatchEvent(dataReadyEvent);
         })
         .catch(err => {
           console.error('Erreur de chargement du fichier JSON :', err);
@@ -15,11 +18,11 @@ function openJson(){
 openJson();
 
 function openOrCloseModal(id, isCloseBtn = false){
-    if(id == null){ console.log("no id");  return;}
+    if(id == null) return;
 
     const modal = document.getElementById(id);
 
-    if(!modal){ console.log("no modal"); return;}
+    if(!modal) return;
 
     if(isCloseBtn == true){
         modal.classList.add("hidden");
@@ -29,7 +32,7 @@ function openOrCloseModal(id, isCloseBtn = false){
 
         const searchComponents = document.getElementById("search-components");
         searchComponents.addEventListener("click", (e) => {
-            e.stopPropagation(); // Empêche la propagation de l'événement click
+            e.stopPropagation();
         });
 
         const searchInput = document.getElementById("search-input");
@@ -39,15 +42,12 @@ function openOrCloseModal(id, isCloseBtn = false){
 
             if(value && value.length > 0){
                 const allValues = searchInData(value);
-                console.log(allValues)
                 createList(allValues);
             }else{
                 clearList();
             }
         })
     }
-
-    console.log(data)
 }
 
 const openSearchModalBtn = document.getElementById("openSearchModalBtn");
@@ -55,8 +55,10 @@ openSearchModalBtn.addEventListener("click", () => openOrCloseModal("search-moda
 
 function searchInData(value){
     let list = [];
+    let id = 0;
 
     for (const book of data.bookData) {
+        book.id = id;
         if(book.title.toLowerCase().includes(value) || 
            book.author.toLowerCase().includes(value) || 
            book.genre.toLowerCase().includes(value) || 
@@ -64,6 +66,7 @@ function searchInData(value){
         {
             list.push(book)
         }
+        id++;
     }
 
     return list;
@@ -76,8 +79,7 @@ function createList(values){
     if(values.length > 0 ){
         for (const value of values) {
             let li = document.createElement("li");
-            li.classList = "flex justify-between gap-x-6 py-5 hover:bg-gray-100";
-
+            li.classList = "flex justify-between gap-x-6 py-5 hover:bg-gray-100 hover:cursor-pointer";
 
             li.innerHTML = `<div class="flex min-w-0 gap-x-4">\
               <div class="min-w-0 flex-auto">\
@@ -91,6 +93,10 @@ function createList(values){
             </div>`
 
             list.appendChild(li)
+
+            li.addEventListener("click", ()=>{
+                window.location.href = "livre.html?id=" + value.id;
+            })
         }
     }else{
         list.innerHTML = '<p class="p-5 w-full text-center font-semibold">Aucun résultat</p>';
