@@ -1,6 +1,7 @@
 {
   "bookData": [
     {
+      "id": 0,
       "title": "L'Étranger",
       "author": "Albert Camus",
       "genre": "Roman",
@@ -10,6 +11,7 @@
       "dueDate": null
     },
     {
+      "id": 1,
       "title": "1984",
       "author": "George Orwell",
       "genre": "Science-Fiction",
@@ -19,6 +21,7 @@
       "dueDate": "2023-12-15"
     },
     {
+      "id": 2,
       "title": "Le Seigneur des Anneaux",
       "author": "J.R.R. Tolkien",
       "genre": "Fantasy",
@@ -28,6 +31,7 @@
       "dueDate": null
     },
     {
+      "id": 3,
       "title": "Le Petit Prince",
       "author": "Antoine de Saint-Exupéry",
       "genre": "Roman",
@@ -37,6 +41,7 @@
       "dueDate": "2023-11-30"
     },
     {
+      "id": 4,
       "title": "Dune",
       "author": "Frank Herbert",
       "genre": "Science-Fiction",
@@ -46,6 +51,7 @@
       "dueDate": null
     },
     {
+      "id": 5,
       "title": "Crime et Châtiment",
       "author": "Fiodor Dostoïevski",
       "genre": "Roman",
@@ -55,6 +61,7 @@
       "dueDate": null
     },
     {
+      "id": 6,
       "title": "Le Maître et Marguerite",
       "author": "Mikhaïl Boulgakov",
       "genre": "Roman",
@@ -64,6 +71,7 @@
       "dueDate": null
     },
     {
+      "id": 7,
       "title": "Fahrenheit 451",
       "author": "Ray Bradbury",
       "genre": "Science-Fiction",
@@ -73,6 +81,7 @@
       "dueDate": "2023-12-20"
     },
     {
+      "id": 8,
       "title": "L'Écume des Jours",
       "author": "Boris Vian",
       "genre": "Roman",
@@ -82,6 +91,7 @@
       "dueDate": "2023-12-10"
     },
     {
+      "id": 9,
       "title": "Le Guépard",
       "author": "Giuseppe Tomasi di Lampedusa",
       "genre": "Roman historique",
@@ -91,6 +101,7 @@
       "dueDate": null
     },
     {
+      "id": 10,
       "title": "Le Château",
       "author": "Franz Kafka",
       "genre": "Roman",
@@ -100,6 +111,7 @@
       "dueDate": null
     },
     {
+      "id": 11,
       "title": "L'Alchimiste",
       "author": "Paulo Coelho",
       "genre": "Roman",
@@ -109,6 +121,7 @@
       "dueDate": "2023-12-12"
     },
     {
+      "id": 12,
       "title": "Le Nom du Vent",
       "author": "Patrick Rothfuss",
       "genre": "Fantasy",
@@ -118,6 +131,7 @@
       "dueDate": null
     },
     {
+      "id": 13,
       "title": "Les Misérables",
       "author": "Victor Hugo",
       "genre": "Roman",
@@ -127,6 +141,7 @@
       "dueDate": null
     },
     {
+      "id": 14,
       "title": "Le Meilleur des mondes",
       "author": "Aldous Huxley",
       "genre": "Science-Fiction",
@@ -136,6 +151,7 @@
       "dueDate": "2023-12-18"
     },
     {
+      "id": 15,
       "title": "Le Comte de Monte-Cristo",
       "author": "Alexandre Dumas",
       "genre": "Roman d'aventure",
@@ -145,6 +161,7 @@
       "dueDate": null
     },
     {
+      "id": 16,
       "title": "Orgueil et Préjugés",
       "author": "Jane Austen",
       "genre": "Roman",
@@ -154,6 +171,7 @@
       "dueDate": null
     },
     {
+      "id": 17,
       "title": "Le Prophète",
       "author": "Kahlil Gibran",
       "genre": "Philosophie",
@@ -163,6 +181,7 @@
       "dueDate": "2023-12-14"
     },
     {
+      "id": 18,
       "title": "La Nuit des temps",
       "author": "René Barjavel",
       "genre": "Science-Fiction",
@@ -172,6 +191,7 @@
       "dueDate": null
     },
     {
+      "id": 19,
       "title": "Les Trois Mousquetaires",
       "author": "Alexandre Dumas",
       "genre": "Roman d'aventure",
@@ -181,6 +201,7 @@
       "dueDate": null
     },
     {
+      "id": 20,
       "title": "Le Parfum",
       "author": "Patrick Süskind",
       "genre": "Roman",
@@ -190,6 +211,7 @@
       "dueDate": "2023-12-16"
     },
     {
+      "id": 21,
       "title": "Les Fourmis",
       "author": "Bernard Werber",
       "genre": "Science-Fiction",
@@ -199,6 +221,7 @@
       "dueDate": null
     },
     {
+      "id": 22,
       "title": "Les Cerfs-volants de Kaboul",
       "author": "Khaled Hosseini",
       "genre": "Roman",

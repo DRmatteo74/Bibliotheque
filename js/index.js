@@ -55,10 +55,8 @@ openSearchModalBtn.addEventListener("click", () => openOrCloseModal("search-moda
 
 function searchInData(value){
     let list = [];
-    let id = 0;
 
     for (const book of data.bookData) {
-        book.id = id;
         if(book.title.toLowerCase().includes(value) || 
            book.author.toLowerCase().includes(value) || 
            book.genre.toLowerCase().includes(value) || 
@@ -66,7 +64,6 @@ function searchInData(value){
         {
             list.push(book)
         }
-        id++;
     }
 
     return list;

@@ -10,15 +10,13 @@ function findShelfNameById(data, id) {
         if (shelf.books.includes(parseInt(id))) {
             return shelf.name;
         }
-        console.log(shelf.books)
     }
     return null;
 }
 
 window.addEventListener('dataReady', (event) => {
     const data = event.detail;
-    const book = data.bookData[id];
-
+    const book = data.bookData.find((book)=> book.id == id);
     if(!book){
         window.location.href = "/";
         return;
@@ -36,7 +34,7 @@ window.addEventListener('dataReady', (event) => {
 
     document.getElementById("book-genre").textContent = "Genre : " + book.genre
     document.getElementById("book-year").textContent = "Date : " + book.year
-    document.getElementById("book-shelf").textContent = "Cathégorie : " + shelfName;
+    document.getElementById("book-shelf").textContent = "Catégorie : " + shelfName;
 
     document.getElementById("book-status").textContent = book.status
 
