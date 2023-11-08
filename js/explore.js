@@ -1,3 +1,4 @@
+// Evenement lorsque les données sont récupérées
 window.addEventListener('dataReady', (event) => {
     const data = event.detail;
 
@@ -5,6 +6,7 @@ window.addEventListener('dataReady', (event) => {
 
 });
 
+// Permet de trouver le nom de l'étagère par rapport à un livre
 function findShelfNameById(id) {
     for (const shelf of data.shelfData) {
         if (shelf.books.includes(parseInt(id))) {
@@ -14,6 +16,7 @@ function findShelfNameById(id) {
     return null;
 }
 
+// Permet d'afficher la liste des livres
 function createBooksList(books){
     const listPosition = document.getElementById("list-position");
     listPosition.innerHTML = "";
@@ -38,24 +41,28 @@ function createBooksList(books){
     }
 }
 
+// Trie les livres par nom
 function sortByTitle() {
     let books = data.bookData;
     books.sort((a, b) => a.title.localeCompare(b.title));
     createBooksList(books);
 }
 
+// Trie les livres par auteur
 function sortByAuthor() {
     let books = data.bookData;
     books.sort((a, b) => a.author.localeCompare(b.author));
     createBooksList(books);
 }
 
+// Trie les livres par genre
 function sortByGenre() {
     let books = data.bookData;
     books.sort((a, b) => a.genre.localeCompare(b.genre));
     createBooksList(books);
 }
 
+// Trie les livres par étagère (appelé catégorie)
 function sortByShelf() {
     const books = data.bookData;
     const shelfData = data.shelfData;
@@ -74,12 +81,14 @@ function sortByShelf() {
     createBooksList(sortedBooks);
 }
 
+// Trie les livres par date
 function sortByDate() {
     let books = data.bookData;
     books.sort((a, b) => a.year - b.year);
     createBooksList(books);
 }
 
+// Trie les livres par statut
 function sortByStatus() {
     let books = data.bookData;
     books.sort((a, b) => a.status.localeCompare(b.status));
@@ -88,6 +97,7 @@ function sortByStatus() {
 
 const dropdownButton = document.getElementById("dropdown-button");
 
+// Permet de changer le type de tri 
 dropdownButton.addEventListener("change", ()=>{
     const dropdownValue = dropdownButton.value;
     const options = dropdownButton.children;
@@ -125,4 +135,4 @@ dropdownButton.addEventListener("change", ()=>{
     }
 });
 
-document.getElementById("search-bar-btn").addEventListener("click", () => openOrCloseModal("search-modal"))
+document.getElementById("search-bar-btn").addEventListener("click", () => openOrCloseSearchModal())

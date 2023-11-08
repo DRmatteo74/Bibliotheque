@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/img/bookshelf.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <title>Bibliothèque - Livre</title>
 </head>
@@ -113,16 +115,46 @@
                     <p class="text-gray-600">Statut : <span class="text-gray-900" id="book-status"></span></p>
                     <p class="text-gray-600 hidden" id="book-dueDate-hidden">Disponible à nouveau le : <span class="text-gray-900" id="book-dueDate"></span></p>
                 </div>
-                <button type="submit" class="mt-5 w-full rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none disabled:bg-gray-400" id="book-reserve-btn">Réserver</button>
+                <button id="book-reserve-btn" type="submit" class="mt-5 w-full rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none disabled:bg-gray-400" id="book-reserve-btn">Réserver</button>
               </div>
             </div>
           </div>
           </div>
         </div>
       </div>
-    
+      
+        <div id="reserve-modal" class="hidden">
+            <div class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden" role="dialog" aria-modal="true">
+                <div class="fixed inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100"></div>
+                <div class="relative w-auto opacity-100" id="reserve-components">
+                    <div class="rounded-lg bg-white shadow-md p-7">
+                        <div class="relative">
+                            <h2 class="font-bold text-xl mb-7">Sélectionnez la période de réservation : </h2>
+                            <div class="flex justify-center">
+                                <input id="date-reserve" class="hidden" type="text">
+                            </div>
+                            <button id="book-reserve-validate-btn" type="submit" class="mt-10 w-full rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none disabled:bg-gray-400" id="book-reserve-btn">Valider</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     <script src="js/index.js"></script>
     <script src="js/bookData.js" defer></script>
+    <script>
+        flatpickr("#date-reserve", {
+            enableTime: false, 
+            dateFormat: "Y-m-d",
+            mode: "range",
+            minDate: "today",  
+            inline: true,
+            locale: {
+                firstDayOfWeek: 1
+            }
+        });
+    </script>
+    
 </body>
 </html>

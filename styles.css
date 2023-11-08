@@ -1,6 +1,19 @@
+/* Fond d'écran page d'acceuil */
 .background-image{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pexels-stanislav-kondratiev-2908984.jpg);
     background-size: cover;
+}
+
+/* Style du calendrier */
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange{
+    background: rgb(79 70 229) !important;
+    border-color: rgb(79 70 229) !important;
+}
+
+.flatpickr-day.inRange{
+    background: rgb(224 231 255) !important;
+    border-color: rgb(224 231 255) !important;
+    box-shadow: -5px 0 0 rgb(224 231 255),5px 0 0 rgb(224 231 255) !important;
 }

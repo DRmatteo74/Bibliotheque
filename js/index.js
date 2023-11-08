@@ -1,26 +1,37 @@
 let data;
 
+// Fonction permettant de récupérer les données json et les sauvegarder dans sessionStorage.
 function openJson(){
-    fetch('../data.json')
-        .then(response => response.json())
-        .then(_data => {
-          data = _data;
+    if(sessionStorage.getItem("JSONData") == null){
+        fetch('../data.json')
+            .then(response => response.json())
+            .then(_data => {
+                data = _data;
+                sessionStorage.setItem("JSONData", JSON.stringify(data));
 
-          const dataReadyEvent = new CustomEvent("dataReady", {detail: _data});
-          window.dispatchEvent(dataReadyEvent);
-        })
-        .catch(err => {
-          console.error('Erreur de chargement du fichier JSON :', err);
-          return null;
-        });
+                // Créer un événement quand les données sont récupérées
+                const dataReadyEvent = new CustomEvent("dataReady", {detail: _data});
+                window.dispatchEvent(dataReadyEvent);
+            })
+            .catch(err => {
+                console.error('Erreur de chargement du fichier JSON :', err);
+                return null;
+            });
+    }else{
+        data = JSON.parse(sessionStorage.getItem("JSONData"));
+        // Créer un événement quand les données sont récupérées
+        setTimeout(()=>{
+            const dataReadyEvent = new CustomEvent("dataReady", {detail: data});
+            window.dispatchEvent(dataReadyEvent);
+        }, 50)
+    }
 }
 
 openJson();
 
-function openOrCloseModal(id, isCloseBtn = false){
-    if(id == null) return;
-
-    const modal = document.getElementById(id);
+// Permet d'ouvrir et fermé la fenêtre de recherche
+function openOrCloseSearchModal(isCloseBtn = false){
+    const modal = document.getElementById("search-modal");
 
     if(!modal) return;
 
@@ -28,13 +39,15 @@ function openOrCloseModal(id, isCloseBtn = false){
         modal.classList.add("hidden");
     }else{
         modal.classList.remove("hidden");
-        modal.addEventListener("click", () => openOrCloseModal(id, true))
-
+        modal.addEventListener("click", () => openOrCloseSearchModal(true))
+        
+        // Empêche la fermeture de la fenêtre lors du clique sur un élément de la fenêtre
         const searchComponents = document.getElementById("search-components");
         searchComponents.addEventListener("click", (e) => {
             e.stopPropagation();
         });
 
+        // Recherche
         const searchInput = document.getElementById("search-input");
 
         searchInput.addEventListener("input", (e)=> {
@@ -51,8 +64,9 @@ function openOrCloseModal(id, isCloseBtn = false){
 }
 
 const openSearchModalBtn = document.getElementById("openSearchModalBtn");
-openSearchModalBtn.addEventListener("click", () => openOrCloseModal("search-modal"))
+openSearchModalBtn.addEventListener("click", () => openOrCloseSearchModal())
 
+// Recherche dans les données, les livres qui ont un titre, un auteur, ... qui correspondent à la recherche
 function searchInData(value){
     let list = [];
 
@@ -69,6 +83,7 @@ function searchInData(value){
     return list;
 }
 
+// Affiche les livres qui correspondent à la recherche
 function createList(values){
     const list = document.getElementById("search-result-list");
     list.innerHTML = "";
@@ -101,6 +116,7 @@ function createList(values){
     
 }
 
+// Permet de vider la liste des livres affichés
 function clearList(){
     const list = document.getElementById("search-result-list");
     list.innerHTML = '<p class="p-5 w-full text-center font-semibold">Aucun résultat</p>';
