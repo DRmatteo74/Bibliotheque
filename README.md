@@ -11,6 +11,8 @@
 
 Les données sont chargées une seule fois lors de l'ouverture de la page web, puis elles sont stockées dans le session storage. Cette approche permet de modifier les valeurs sans être bloqué si tous les livres ont été emprunté. En effet, lorsque la page web est fermée, le session storage est effacé, et nous repartons avec les données d'origine. Cette méthode facilite la réalisation de tests.
 
+Le fichier json a été modifié afin d'ajouter un identifiant unique à chaque livre. Cela permet de trier les livres et les affichés de manières plus pratiques.
+
 ## Utilisation du site sans installation d'un serveur Web
 Clonez le dépôt Git : https://github.com/DRmatteo74/Bibliotheque.git puis ouvrez le fichier index.html.
 
